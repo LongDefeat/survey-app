@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Satisfaction Survey Questions
+{% endblock title %}
+
+{% block body %}    
+    <h1> {{title}}</h1>
+    {% for question in questions %} 
+        <p>{{question.question}}</p>
+            <input name="{{question}}">
+        </p>
+    {% endfor %}
+{% endblock body %}
